@@ -26,8 +26,8 @@ pkgTest <- function(pkg){
 # here is where you load any necessary packages
 # ex: stringr
 # lapply(c("stringr"),  pkgTest)
-
-lapply(c(),  pkgTest)
+install.packages("tidyverse")
+lapply(c("tidyverse"),  pkgTest)
 
 # set wd for current folder
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
