@@ -1,0 +1,19 @@
+Coefficients:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      0.37569    0.05416   6.937 4.01e-12 ***
+countrieslow    -0.64835    0.05388 -12.033  < 2e-16 ***
+countriesmedium -0.31199    0.05387  -5.792 6.97e-09 ***
+sanctions5       0.19186    0.06216   3.086  0.00203 ** 
+sanctions15     -0.13325    0.06208  -2.146  0.03183 *  
+sanctions20     -0.30356    0.06209  -4.889 1.01e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 11783  on 8499  degrees of freedom
+Residual deviance: 11568  on 8494  degrees of freedom
+AIC: 11580
+
+Number of Fisher Scoring iterations: 4
+
