@@ -1,6 +1,8 @@
 ##################################
 # Tutorial 10: Survival Analysis #
 ##################################
+library(eha)
+library(survival)
 
 data(child)
 
@@ -11,6 +13,8 @@ child_surv <- with(child, Surv(enter, exit, event))
 km <- survfit(child_surv ~ 1, data = child)
 summary(km, times = seq(0, 15, 1))
 plot(km, main = "Kaplan-Meier Plot", xlab = "Years", ylim = c(0.7, 1))
+install.packages("ggfortify")
+library(ggfortify)
 autoplot(km)
 
 km_socBranch <- survfit(child_surv ~ socBranch, data = child)
@@ -21,6 +25,7 @@ autoplot(km_socBranch)
 cox <- coxph(child_surv ~ sex + socBranch, data = child)
 summary(cox)
 drop1(cox, test = "Chisq")
+library(stargazer)
 stargazer(cox, type = "text")
 
 # There is a 0.08 decrease in the expected log of the hazard for female babies compared to 
